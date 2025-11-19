@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -10,6 +11,8 @@ int main()
         "*****",
         "*****",
     };
+
+    system("cls");
 
     int playerX = 0,
         playerY = 0;
@@ -33,8 +36,7 @@ int main()
             }
             printf("\n");
         }
-        scanf("%c", &input);
-        getchar();
+        input = getch();
         // w -> atas
         // a -> kiri
         // s -> bawah
@@ -42,17 +44,23 @@ int main()
         switch (input)
         {
         case 'w':
-            playerY -= 1;
+            if (playerY > 0)
+                playerY -= 1;
             break;
         case 'a':
-            playerX -= 1;
+            if (playerX > 0)
+                playerX -= 1;
             break;
         case 's':
-            playerY += 1;
+            if (playerY < 4)
+                playerY += 1;
             break;
         case 'd':
-            playerX += 1;
+            if (playerX < 4)
+                playerX += 1;
             break;
         }
+        system("cls");
     }
+    return 0;
 }
