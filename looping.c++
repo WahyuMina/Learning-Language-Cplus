@@ -6,6 +6,8 @@ int main()
     // for, while, do while
     // break, continue
 
+    // Repetition / Looping
+    // for
     // for (int i = 1; i <= 10; i++) // i += 2)
     // {
     //     if (i == 5)
@@ -13,16 +15,39 @@ int main()
     //     continue;  // lanjut
     //     printf("%d\n", i);
     // }
-    printf("While:\n");
-    int j = 1;
-    while (j <= 10) // while = Mengecek
-    {
-        printf("%d\n", j++);
+    // while
+    // printf("While:\n");
+    // int j = 1;
+    // while (j <= 10) // while = Mengecek
+    // {
+    //     printf("%d\n", j++);
 
-        printf("dO while:\n");
-        int k = 11;
-        do // Jalanain dulu
+    // do while
+    //     printf("dO while:\n");
+    //     int k = 11;
+    //     do // Jalanain dulu
+    //     {
+    //         printf("%d\n", k++);
+    //     } while (k <= 10);
+    // }
+
+    // Nested loop
+    int size = 10;
+    scanf("%d", &size);
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
         {
-            printf("%d\n", k++);
-        } while (k <= 10);
+            if (i == 0 || i == size - 1 || j == 0 || j == size - 1)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf("");
+            }
+        }
+        printf("\n");
     }
+    return 0;
+}
