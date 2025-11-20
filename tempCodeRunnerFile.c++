@@ -1,1 +1,2 @@
-++);
+if (swapped == false)
+            break;
